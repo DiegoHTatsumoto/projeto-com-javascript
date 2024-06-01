@@ -39,11 +39,3 @@ button:hover {
     background-color: rgb(99, 69, 29);
     cursor: pointer;
 }
-
-.autorizado{
-    color: green;
-}
-
-.negado{
-    color: red;
-}
