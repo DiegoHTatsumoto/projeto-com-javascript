@@ -6,19 +6,13 @@ form.addEventListener('submit', function (e) {
 	const input_num_a = Number(document.getElementById('campo1').value);
 	const input_num_b = Number(document.getElementById('campo2').value);
 
-	const msgOK = `Sim, ${input_num_a} é maior que ${input_num_b}, parabéns.`;
-	const msgNot = `Não, ${input_num_a} não é maior que ${input_num_b}, portanto errado.`;
-
 	const res = document.getElementById('res');
 	
-	if (input_num_a > input_num_b) {
-		alert(msgOK);
-		res.innerHTML = "O resultado do campo 1 foi superior ao do campo 2";
-		res.className = "autorizado"
+	if (input_num_b > input_num_a) {
+		res.innerText = `Sim, ${input_num_b} é maior que ${input_num_a}. Parabéns!`;
+		res.style.color = 'green';
 	} else {
-		alert(msgNot);
-		res.innerHTML = "O resultado do campo 2 foi superior ao do campo 1";
-		res.className = "negado"
+		res.innerText = `Não, ${input_num_b} não é maior que ${input_num_a}. Tente novamente.`;
+		res.style.color = 'red';
 	}
-});
-
+})
